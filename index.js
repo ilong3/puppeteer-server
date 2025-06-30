@@ -379,7 +379,7 @@ process.on('SIGINT', async () => {
   process.exit(0);
 });
 
-app.listen(CONFIG.PORT, async () => {
+app.listen(CONFIG.PORT, '0.0.0.0', async () => {
   console.log(`Server is running on http://localhost:${CONFIG.PORT}`);
   await initializeBrowser();
 });
